@@ -12,6 +12,7 @@
 		D709B66B29D51C96004676EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D709B66A29D51C96004676EB /* Assets.xcassets */; };
 		D709B66E29D51C96004676EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D709B66D29D51C96004676EB /* Preview Assets.xcassets */; };
 		D709B67629D64162004676EB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709B67529D64162004676EB /* PrimaryButton.swift */; };
+		D709B67929D8922F004676EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709B67829D8922F004676EB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D709B66A29D51C96004676EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D709B66D29D51C96004676EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D709B67529D64162004676EB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		D709B67829D8922F004676EB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +55,12 @@
 		D709B66529D51C95004676EB /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
-				D709B67429D63FFA004676EB /* Components */,
 				D709B66629D51C95004676EB /* TriviaApp.swift */,
-				D709B66829D51C95004676EB /* ContentView.swift */,
+				D709B67729D88A89004676EB /* Views */,
+				D709B67429D63FFA004676EB /* Components */,
 				D709B66A29D51C96004676EB /* Assets.xcassets */,
 				D709B66C29D51C96004676EB /* Preview Content */,
+				D709B67829D8922F004676EB /* Extensions.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -76,6 +79,14 @@
 				D709B67529D64162004676EB /* PrimaryButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D709B67729D88A89004676EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D709B66829D51C95004676EB /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				D709B67629D64162004676EB /* PrimaryButton.swift in Sources */,
 				D709B66929D51C95004676EB /* ContentView.swift in Sources */,
 				D709B66729D51C95004676EB /* TriviaApp.swift in Sources */,
+				D709B67929D8922F004676EB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
