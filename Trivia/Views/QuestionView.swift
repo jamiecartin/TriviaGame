@@ -23,11 +23,18 @@ struct QuestionView: View {
             ProgressBar(progress: 40)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("Which of the following countries is within the Eurozone but outside of the Schegan Area?")
+                Text("Bulls are attracted to the color red.")
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
+                
+                AnswerRow(answer: Answer(text: "false", isCorrect: true))
+                AnswerRow(answer: Answer(text: "true", isCorrect: false))
             }
+            
+            PrimaryButton(text: "Next")
+            
+            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
