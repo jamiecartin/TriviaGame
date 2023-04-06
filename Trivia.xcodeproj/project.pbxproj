@@ -19,6 +19,7 @@
 		D77459D729DBB3B1001A0CA9 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77459D629DBB3B1001A0CA9 /* AnswerRow.swift */; };
 		D77459D929DBD90A001A0CA9 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77459D829DBD90A001A0CA9 /* TriviaView.swift */; };
 		D77459DB29DCD051001A0CA9 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77459DA29DCD051001A0CA9 /* Trivia.swift */; };
+		D77459DD29DE23B4001A0CA9 /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77459DC29DE23B4001A0CA9 /* TriviaManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D77459D629DBB3B1001A0CA9 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		D77459D829DBD90A001A0CA9 /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
 		D77459DA29DCD051001A0CA9 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		D77459DC29DE23B4001A0CA9 /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				D709B66A29D51C96004676EB /* Assets.xcassets */,
 				D709B66C29D51C96004676EB /* Preview Content */,
 				D709B67829D8922F004676EB /* Extensions.swift */,
+				D77459DC29DE23B4001A0CA9 /* TriviaManager.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				D77459D929DBD90A001A0CA9 /* TriviaView.swift in Sources */,
 				D77459DB29DCD051001A0CA9 /* Trivia.swift in Sources */,
 				D709B67629D64162004676EB /* PrimaryButton.swift in Sources */,
+				D77459DD29DE23B4001A0CA9 /* TriviaManager.swift in Sources */,
 				D77459D729DBB3B1001A0CA9 /* AnswerRow.swift in Sources */,
 				D709B66929D51C95004676EB /* ContentView.swift in Sources */,
 				D77459D529DBB218001A0CA9 /* Answer.swift in Sources */,
