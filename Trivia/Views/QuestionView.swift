@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var triviaMananger: TriviaManager
+    
     var body: some View {
         VStack(spacing: 40) {
             HStack {
@@ -16,20 +18,22 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("1 out of 10")
+                Text("\(triviaMananger.index + 1) out of \(triviaMananger.length)")
                     .foregroundColor(Color("AccentColor"))
                     .fontWeight(.heavy)
             }
-            ProgressBar(progress: 40)
+            ProgressBar(progress: triviaMananger.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("Bulls are attracted to the color red.")
+                Text(triviaMananger.question)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
                 
                 AnswerRow(answer: Answer(text: "false", isCorrect: true))
+                    .environmentObject(triviaMananger)
                 AnswerRow(answer: Answer(text: "true", isCorrect: false))
+                    .environmentObject(triviaMananger)
             }
             
             PrimaryButton(text: "Next")
@@ -46,5 +50,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         QuestionView()
+            .environmentObject(TriviaManager())
     }
 }
