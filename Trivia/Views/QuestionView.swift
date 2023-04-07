@@ -30,13 +30,21 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(.gray)
                 
-                AnswerRow(answer: Answer(text: "false", isCorrect: true))
-                    .environmentObject(triviaMananger)
-                AnswerRow(answer: Answer(text: "true", isCorrect: false))
-                    .environmentObject(triviaMananger)
+
+                ForEach(triviaMananger.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(triviaMananger)
+                    
+                }
+                
             }
             
-            PrimaryButton(text: "Next")
+            Button {
+                triviaMananger.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next", background: triviaMananger.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+            }
+            .disabled(!triviaMananger.answerSelected)
             
             Spacer()
         }
