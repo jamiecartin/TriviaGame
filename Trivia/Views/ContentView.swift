@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var triviaManager = TriviaManager()
+    @StateObject var triviaManager = TriviaManager()
     
     var body: some View {
         NavigationView {
@@ -20,6 +20,7 @@ struct ContentView: View {
                     Text("Are you ready to test out your trivia skills?")
                         .foregroundColor(Color("AccentColor"))
                 }
+                
                 NavigationLink {
                     TriviaView()
                         .environmentObject(triviaManager)
@@ -29,7 +30,7 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
-        .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+            .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         }
     }
 }

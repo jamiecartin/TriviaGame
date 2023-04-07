@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @EnvironmentObject var triviaMananger: TriviaManager
-    
+    @EnvironmentObject var triviaManager: TriviaManager
+
     var body: some View {
         VStack(spacing: 40) {
             HStack {
@@ -18,38 +18,36 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("\(triviaMananger.index + 1) out of \(triviaMananger.length)")
+                Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
                     .foregroundColor(Color("AccentColor"))
                     .fontWeight(.heavy)
             }
-            ProgressBar(progress: triviaMananger.progress)
+            
+            ProgressBar(progress: triviaManager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text(triviaMananger.question)
+                Text(triviaManager.question)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
                 
-
-                ForEach(triviaMananger.answerChoices, id: \.id) { answer in
+                ForEach(triviaManager.answerChoices, id: \.id) { answer in
                     AnswerRow(answer: answer)
-                        .environmentObject(triviaMananger)
-                    
+                        .environmentObject(triviaManager)
                 }
-                
             }
             
             Button {
-                triviaMananger.goToNextQuestion()
+                triviaManager.goToNextQuestion()
             } label: {
-                PrimaryButton(text: "Next", background: triviaMananger.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
             }
-            .disabled(!triviaMananger.answerSelected)
+            .disabled(!triviaManager.answerSelected)
             
             Spacer()
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         .navigationBarHidden(true)
     }
